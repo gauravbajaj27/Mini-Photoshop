@@ -1,1 +1,1 @@
-# Mini-Photoshop-
+# Mini-Photoshop
