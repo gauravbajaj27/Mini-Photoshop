@@ -1,4 +1,5 @@
-from tkinter import filedialog, Text
+from tkinter import filedialog
+from tkinter.filedialog import asksaveasfile
 from tkinter import *
 from PIL import *
 import os
@@ -13,6 +14,9 @@ root.configure(background="#ef476f")
 
 def imgPreview():
     global myimage
+    global img1
+
+
     root.filename = filedialog.askopenfilename(initialdir="C:/",
                                                title="Open Image"
                                                , filetypes=(("jpg files", "*.jpg"), ("png files", "*.png") , ("all files", "*.*")))
@@ -23,6 +27,26 @@ def imgPreview():
     img1.thumbnail((500,1080))
     myimage = ImageTk.PhotoImage(img1)
     canvas0.create_image(100, 0, anchor=NW, image=myimage)
+
+
+# def saveImage():
+#     root.filename2 = filedialog.asksaveasfile(title="Save", filetypes=(('jpeg','*.jpg'),('png','*.png'),('all files','*.*'))
+#                                               , defaultextension=(('jpeg','*.jpg'),('png','*.png'),('all files','*.*')))
+#     # files = [('jpeg','*.jpg'),('png','*.png'),('all files','*.*')]
+#     # file = asksaveasfile(filetypes = files, defaultextension=files)
+#     # img2 =Image.register_save(root.filename)
+#     img1.save(root.filename)
+
+def saveimg():
+    # filename1 = root.filename
+    # img2 = Image.open(filename1)
+    root.filename2 = filedialog.asksaveasfile(title="Save",
+                                              filetypes=(('jpeg', '*.jpg'), ('png', '*.png'), ('all files', '*.*'))
+                                              , defaultextension=(
+        ('jpeg', '*.jpg'), ('png', '*.png'), ('all files', '*.*')))
+    img1.save(root.filename2)
+
+
     # 350, 4200
     # imglabel = Label(root, image=myimage)
     # imglabel.grid(row=0,column=1, columnspan=4)
@@ -112,7 +136,7 @@ canvas0.grid(row=0,column=1, columnspan=2, rowspan=5, padx=0, pady=0, ipadx=0, i
 openImageButton = tk.Button(root, text="Open Image", padx=10, pady=0, fg="white", bg="#FF8811", command=imgPreview)
 openImageButton.grid(row=0,column=0, rowspan=1, columnspan=1, sticky=NW, padx=35, pady=2, ipadx=0, ipady=0)
 # button  GradientButton
-GradientButton = tk.Button(root, text="Gradient", padx=10, pady=0, fg="white", bg="#FF8811", command=gradButt)
+GradientButton = tk.Button(root, text="Gradient", padx=10, pady=0, fg="white", bg="#FF8811")
 GradientButton.grid(row=1, column=0, sticky=NW, padx=35, pady=0, ipadx=0, ipady=0)
 # button  EdgeDetectionButton
 EdgeDetectionButton = tk.Button(root, text="Edge Detection", padx=10, pady=0, fg="white", bg="#FF8811")
@@ -202,7 +226,7 @@ slide_button.grid(row=13, column=0, sticky="", padx=0, pady=0, ipadx=0, ipady=0)
 # canvas6.grid(row=6, column=1, columnspan=4)
 
 # button 8 Export
-Export = tk.Button(root, text="Export", padx=0, pady=0, fg="white", bg="#FF8811")
+Export = tk.Button(root, text="Export", padx=0, pady=0, fg="white", bg="#FF8811", command=saveimg)
 Export.grid(row=14, column=0, sticky="", padx=0, pady=4, ipadx=0, ipady=0)
 
 # //// ROW 7
