@@ -13,8 +13,8 @@ root.configure(background="white")
 
 def imgPreview():
     global myimage
-    root.filename = filedialog.askopenfilename(initialdir="C:/Users/microsoft/PycharmProjects/SSgui.py/photos",
-                                               title="Image open"
+    root.filename = filedialog.askopenfilename(initialdir="C:/",
+                                               title="Open Image"
                                                , filetypes=(("jpg files", "*.jpg"), ("png files", "*.png") , ("all files", "*.*")))
     # label = Label(root, text=root.filename)
     # label.pack()
@@ -60,6 +60,7 @@ def imgPreview():
 # ROW 0
 # canvas1
 # 457b9d
+
 #  ////    ROW 0
 canvas1 = tk.Canvas(root, height=200, width=700, bg="#457b9d")
 canvas1.grid(row=0,column=1, columnspan=4)
@@ -69,7 +70,8 @@ openImageButton = tk.Button(root, text="Open Image", padx=10, pady=5, fg="white"
 openImageButton.grid(row=0,column=0)
 
 #  //// ROW 1
-
+canvas2 =tk.Canvas(root,height=70, width=800, bg="#2a9d8f")
+canvas2.grid(row=1, column=0,  columnspan=5, rowspan=1)
 # button  GradientButton
 GradientButton = tk.Button(root, text="Gradient", padx=10, pady=5, fg="white", bg="#FF8811")
 GradientButton.grid(row=1, column=0)
@@ -151,8 +153,8 @@ slide_button.grid(row=5, column=3)
 # //// ROW 6
 
 # canvas2
-canvas2 = tk.Canvas(root, height=200, width=700, bg="#457b9d")
-canvas2.grid(row=6, column=1, columnspan=4)
+canvas3 = tk.Canvas(root, height=200, width=700, bg="#457b9d")
+canvas3.grid(row=6, column=1, columnspan=4)
 
 # button 8 Export
 Export = tk.Button(root, text="Export", padx=10, pady=5, fg="white", bg="#FF8811")
