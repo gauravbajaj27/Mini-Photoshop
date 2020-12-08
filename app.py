@@ -7,7 +7,7 @@ from PIL import ImageTk,Image
 
 root = tk.Tk()
 root.title("Signals and Systems project")
-root.iconbitmap('C:/Users/microsoft/OneDrive/Desktop/camera.ico')
+# root.iconbitmap('C:/Users/microsoft/OneDrive/Desktop/camera.ico')
 # root.geometry("850x500")
 root.configure(background="white")
 
