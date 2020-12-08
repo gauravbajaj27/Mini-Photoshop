@@ -62,16 +62,16 @@ def imgPreview():
 # 457b9d
 
 #  ////    ROW 0
-canvas1 = tk.Canvas(root, height=200, width=700, bg="#457b9d")
-canvas1.grid(row=0,column=1, columnspan=4)
+canvas0 = tk.Canvas(root, height=200, width=700, bg="#457b9d")
+canvas0.grid(row=0,column=1, columnspan=4)
 
 # button  openImage
 openImageButton = tk.Button(root, text="Open Image", padx=10, pady=5, fg="white", bg="#FF8811", command=imgPreview)
 openImageButton.grid(row=0,column=0)
 
 #  //// ROW 1
-canvas2 =tk.Canvas(root,height=70, width=800, bg="#2a9d8f")
-canvas2.grid(row=1, column=0,  columnspan=5, rowspan=1)
+canvas1 =tk.Canvas(root,height=70, width=820, bg="#2a9d8f")
+canvas1.grid(row=1, column=0,  columnspan=5, rowspan=1)
 # button  GradientButton
 GradientButton = tk.Button(root, text="Gradient", padx=10, pady=5, fg="white", bg="#FF8811")
 GradientButton.grid(row=1, column=0)
@@ -90,6 +90,9 @@ VerticalFlipButton.grid(row=1, column=4)
 
 # //// ROW 2
 
+canvas2 =tk.Canvas(root,height=60, width=820, bg="#264653")
+canvas2.grid(row=2, column=0,  columnspan=5, rowspan=1)
+
 # slider 1 solarisation
 slide_solarisation= Scale(root, from_=0, to=100, orient=HORIZONTAL)
 slide_solarisation.grid(row=2, column=0)
@@ -107,6 +110,9 @@ slide_blur= Scale(root, from_=0, to=100, orient=HORIZONTAL)
 slide_blur.grid(row=2, column=3)
 
 # //// ROW 3
+# canvas3 =tk.Canvas(root,height=50, width=820, bg="#264653")
+# canvas3.grid(row=3, column=0,  columnspan=5, rowspan=1)
+
 label_solarisation = Label(root, text="Solarisation")
 label_solarisation.grid(row= 3, column=0 )
 
@@ -120,6 +126,9 @@ label_blur = Label(root, text="Blur")
 label_blur.grid(row= 3, column=3)
 
 # //// ROW 4
+# canvas4 =tk.Canvas(root,height=70, width=800, bg="#264653")
+# canvas4.grid(row=4, column=0,  columnspan=5, rowspan=1)
+
 label1 = Label(root, text= slide_solarisation.get())
 def slide1():
     label1 = Label(root, text= slide_solarisation.get())
@@ -134,6 +143,9 @@ def slide4():
     label = Label(root, text= slide_blur.get())
     label.grid(row=4, column=3)
 # //// ROW 5
+canvas5 =tk.Canvas(root,height=70, width=820, bg="#264653")
+canvas5.grid(row=5, column=0,  columnspan=5, rowspan=1)
+
 label = Label(root, text= slide_solarisation.get())
 slide_button = Button(root, text="Click to fix value",command=slide1, padx=10, pady=5, fg="white", bg="#0096c7")
 slide_button.grid(row=5, column=0)
@@ -152,9 +164,8 @@ slide_button.grid(row=5, column=3)
 
 # //// ROW 6
 
-# canvas2
-canvas3 = tk.Canvas(root, height=200, width=700, bg="#457b9d")
-canvas3.grid(row=6, column=1, columnspan=4)
+canvas6 = tk.Canvas(root, height=200, width=700, bg="#457b9d")
+canvas6.grid(row=6, column=1, columnspan=4)
 
 # button 8 Export
 Export = tk.Button(root, text="Export", padx=10, pady=5, fg="white", bg="#FF8811")
