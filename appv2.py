@@ -6,11 +6,15 @@ import os
 import tkinter as tk
 from PIL import ImageTk,Image
 
+
 root = tk.Tk()
+
+
 root.title("Signals and Systems project")
 # root.iconbitmap('C:/Users/microsoft/OneDrive/Desktop/camera.ico')
-# root.geometry("900x500")
+root.geometry("1020x1080")
 root.configure(background="#ef476f")
+
 
 def imgPreview():
     global myimage
@@ -42,8 +46,7 @@ def saveimg():
     # img2 = Image.open(filename1)
     root.filename2 = filedialog.asksaveasfile(title="Save",
                                               filetypes=(('jpeg', '*.jpg'), ('png', '*.png'), ('all files', '*.*'))
-                                              , defaultextension=(
-        ('jpeg', '*.jpg'), ('png', '*.png'), ('all files', '*.*')))
+                                              , defaultextension=(('jpeg', '*.jpg'), ('png', '*.png'), ('all files', '*.*')))
     img1.save(root.filename2)
 
 
@@ -227,12 +230,12 @@ slide_button.grid(row=13, column=0, sticky="", padx=0, pady=0, ipadx=0, ipady=0)
 
 # button 8 Export
 Export = tk.Button(root, text="Export", padx=0, pady=0, fg="white", bg="#FF8811", command=saveimg)
-Export.grid(row=14, column=0, sticky="", padx=0, pady=4, ipadx=0, ipady=0)
+Export.grid(row=5, column=3, sticky="", padx=14, pady=4, ipadx=5, ipady=5)
 
 # //// ROW 7
 # button 9 Exit
 Exit = tk.Button(root, text="EXIT!",padx=0, pady=0, fg="white", bg="#FF8811", command=root.quit)
-Exit.grid(row=15, column=0, sticky="", padx=0, pady=0, ipadx=0, ipady=0)
+Exit.grid(row=6, column=3, sticky="", padx=0, pady=0, ipadx=0, ipady=0)
 
 # frame if you want
 # (relwidth, relheight, relx, rely if they are 1 then full canvas will  be occupied)
