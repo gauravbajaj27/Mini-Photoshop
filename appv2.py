@@ -40,10 +40,18 @@ def imgPreview():
 #     # file = asksaveasfile(filetypes = files, defaultextension=files)
 #     # img2 =Image.register_save(root.filename)
 #     img1.save(root.filename)
+def ExportImgPreview():
+    img2 = Image.open(root.filename)
+    # img1 = img1.resize((200, 1400),Image.ANTIALIAS)
+    img2.thumbnail((500, 1080))
+    myimage2 = ImageTk.PhotoImage(img2)
+    canvas1.create_image(100, 0, anchor=NW, image=myimage)
+
 
 def saveimg():
     # filename1 = root.filename
     # img2 = Image.open(filename1)
+
     root.filename2 = filedialog.asksaveasfile(title="Save",
                                               filetypes=(('jpeg', '*.jpg'), ('png', '*.png'), ('all files', '*.*'))
                                               , defaultextension=(('jpeg', '*.jpg'), ('png', '*.png'), ('all files', '*.*')))
@@ -236,6 +244,10 @@ Export.grid(row=5, column=3, sticky="", padx=14, pady=4, ipadx=5, ipady=5)
 # button 9 Exit
 Exit = tk.Button(root, text="EXIT!",padx=0, pady=0, fg="white", bg="#FF8811", command=root.quit)
 Exit.grid(row=6, column=3, sticky="", padx=0, pady=0, ipadx=0, ipady=0)
+
+#  button Preview
+preview = Button(root, text="Preview", command=ExportImgPreview,padx=0, pady=0, fg="white", bg="#FF8811")
+preview.grid(row=7, column=3, sticky="", padx=0, pady=0, ipadx=0, ipady=0)
 
 # frame if you want
 # (relwidth, relheight, relx, rely if they are 1 then full canvas will  be occupied)
