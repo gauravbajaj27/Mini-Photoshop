@@ -1,4 +1,4 @@
-# Project Title
+# Mini-PhotoShop
 The application of Mini-Photoshop demonstrates execution of several different kinds of filters over images of any dimension and allows users to save the execution in their PC later.
 
 Mini-Photoshop helps the user in 
@@ -52,10 +52,10 @@ Open Mini_PhotoShop.ipynb and select Kernel>Restart & Run All
 
 Below are the screenshots of the few filters of the mini-photoshop application:
 
-Applying Greyscale Filter to the image
+**Applying Greyscale Filter to the image**
 ![GIF-1](Images/gif_grayscale.gif)
 
-Increasing brightness of Image and Saving the image
+**Increasing brightness of Image and Saving the image**
 ![GIF-1](Images/gif_BrightnessIncrease_SaveFileExecution.gif)
 ## Documentation
 
