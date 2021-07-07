@@ -2,9 +2,9 @@
 The application of Mini-Photoshop demonstrates execution of several different kinds of filters over images of any dimension and allows users to save the execution in their PC later.
 
 Mini-Photoshop helps the user in 
-- to modify the look of an image
-- beautify and style it as per his/her requirements.
-- Extract details from the image
+- preview the image
+- apply various filters on the image 
+- export filtered image 
 
 Following are the filters that can be applied to an image in mini-Photoshop:
 
