@@ -59,7 +59,7 @@ Below are the screenshots of the few filters of the mini-photoshop application:
 ![GIF-1](Images/gif_BrightnessIncrease_SaveFileExecution.gif)
 ## Documentation
 
-Below is the detailed report containing the explanation and working of each filter along with screenshots of images conversion and algorithms behind the conversion.
+Below is the detailed report containing the explanation and working of each filter along with algorithms behind the filter and the image screenshots after the application of that particulr filter.
 
 [Project Report](https://drive.google.com/file/d/1TJzC23BVf4Etn3dWEcs1pAyvF5AqQIsq/view?usp=sharing)
 
